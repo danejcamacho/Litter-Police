@@ -281,8 +281,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387502284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.69885004, y: 0.69885004, z: 0.4659}
+  m_LocalPosition: {x: -0.03, y: 0.3, z: 0}
+  m_LocalScale: {x: 1.0016618, y: 0.93044895, z: 0.4659}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 427363204}
   m_Layer: 0
   m_Name: Litterbug
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 1
+  timeToChangeDirection: 0
 --- !u!58 &427363206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 9ecd0398967ec4148a64b9e3563902af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
@@ -836,7 +836,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0253e7b90840c14cbeb674bd11cebf8, type: 3}
   m_Color: {r: 0.3882353, g: 0.67058825, b: 0.24705882, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -855,8 +855,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661980820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2704, y: 0.0178, z: 0}
-  m_LocalScale: {x: 46.09965, y: 24.430735, z: 1}
+  m_LocalPosition: {x: 0.8957, y: 0.2305, z: 0}
+  m_LocalScale: {x: 152.60393, y: 84.275314, z: 3.6170297}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1721,8 +1721,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 5781216144050202128, guid: 596137238bae2c84b89384e24750c9af, type: 3}
-  startDelay: 1
-  spawnInterval: 4
+  enemyToSpawn: {fileID: 427363203}
+  startDelayTrash: 1
+  spawnIntervalTrash: 4
+  startDelayEnemy: 1
+  spawnIntervalEnemy: 10
 --- !u!4 &2141726578
 Transform:
   m_ObjectHideFlags: 0
