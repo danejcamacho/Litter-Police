@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] AudioSource _audioSource;
+    [SerializeField] AudioSource _hurtAudio;
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] public UIManager _uIManager;
     bool hasTrash = false;
+    [SerializeField] public HeartSystem _heartSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +30,16 @@ public class Player : MonoBehaviour
         }
         if (other.tag == "Bin"){
             if(hasTrash == true){
-                //TODO add to score
                 _uIManager.AddScore(1);
                 hasTrash = false;
                 _audioSource.Play();
+                
             }
         }
         if (other.tag == "Enemy"){
-            _uIManager.Start();
+            _hurtAudio.Play();
+            _heartSystem.TakeDamage(1);
+            
         }
     }
 

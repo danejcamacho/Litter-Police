@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     public int _score;
 
     [SerializeField]
-    public int _hiscore = 0;
+    static public int _hiscore = 0;
 
     // Start is called before the first frame update
     public void Start()
